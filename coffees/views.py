@@ -3,7 +3,9 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse_lazy
 from .models import Post
 from django.http import HttpResponse
-from .permissions import IsAuthorOrReadOnly
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 
@@ -33,4 +35,8 @@ class EntryDeleteView(DeleteView):
 	model = Post
 	success_url = reverse_lazy('home')
 
-permission_classes = (IsAuthorOrReadOnly,)
+class AuthView(APIView):
+	permission_classes = (IsAuthenticated,)
+
+	def get(self, request):
+		return Response()
