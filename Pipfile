@@ -9,6 +9,9 @@ pylint = "*"
 [packages]
 django = "*"
 djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
