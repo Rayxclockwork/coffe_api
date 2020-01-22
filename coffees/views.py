@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse_lazy
 from .models import Post
 from django.http import HttpResponse
+from .permissions import IsAuthorOrReadOnly
 
 # Create your views here.
 
@@ -31,3 +32,5 @@ class EntryUpdateView(UpdateView):
 class EntryDeleteView(DeleteView):
 	model = Post
 	success_url = reverse_lazy('home')
+
+permission_classes = (IsAuthorOrReadOnly,)
