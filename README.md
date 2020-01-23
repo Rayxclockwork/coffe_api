@@ -33,6 +33,8 @@ Database has been added
 
 Permissions can be changed
 
+when running gunicorn bind, if it can't connect to your attempted port, try a different port number.
+
 ## Change Log
 
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
@@ -41,3 +43,4 @@ Permissions can be changed
 
 * 1/21/20 4:30pm - repo initialized
 * 1/21/20 6:15pm - Readme updated, most of lab requirements hit
+* 1/22/20 3:30pm - Gunicorn/JWT installed and applied
