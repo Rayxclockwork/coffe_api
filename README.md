@@ -44,3 +44,4 @@ when running gunicorn bind, if it can't connect to your attempted port, try a di
 * 1/21/20 4:30pm - repo initialized
 * 1/21/20 6:15pm - Readme updated, most of lab requirements hit
 * 1/22/20 3:30pm - Gunicorn/JWT installed and applied
+* 1/23/20 11:00am - .env/settings added
